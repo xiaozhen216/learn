@@ -2,24 +2,25 @@
 <!DOCTYPE html>
 <script type="text/javascript">
 
+	addSelect=function(element){
+		var adding=document.createElement("option");
+		var a=new Array("杭州","上海","无锡","嘉兴","湖州","宁波","台州","温州","金华");
+	
+		for (var b=0,b<a.length,b++){
+			option.value=a[i];
+			option.text=a[i];
+		}
+		element.appendChild(adding);	
+	}
+
 	window.onload = function() {
-		var selectNote = document.getElementById("test");
+		var selectNote = document.getElementById("RUTINE");
 		addSelect(selectNote);
 	};
 
-	addSelect=function(element){
-		var adding=document.createElement("SELECT");
-		var a=[杭州,上海,无锡,嘉兴,湖州,宁波,台州,温州,金华];
-	
-		for (var b=0,b<a.length,b++){
-			adding.option[i].value= a[i];
-			adding.option[i].innerText= a[i];
-		}
-		element.appendChild(adding);
-	
-	}
 </script>
 
 <body>
+	<SELECT ID="RUTINE"></SELECT>
 	<div id="test" >Let's have a try!<div>
 </body>
