@@ -3,14 +3,16 @@
 <script type="text/javascript">
 
 	addSelect=function(element){
-		var adding=document.createElement("option");
+		
 		var a=new Array("杭州","上海","无锡","嘉兴","湖州","宁波","台州","温州","金华");
 	
-		for (var b=0,b<a.length,b++){
-			option.value=a[i];
-			option.text=a[i];
+		for (var i=0;i<a.length;i++) {
+			var adding = document.createElement("option");
+			adding.value=a[i];
+			adding.text=a[i];
+			element.appendChild(adding);
 		}
-		element.appendChild(adding);	
+			
 	}
 
 	window.onload = function() {

@@ -1,0 +1,19 @@
+
+<!DOCTYPE html>
+<script type="text/javascript">
+
+	window.onload = function() {
+		var selectNote = document.getElementById("rutine");
+		var a = new Array("杭州","上海","无锡","嘉兴","湖州","宁波","台州","温州","金华");
+		for (var i = 0; i < a.length; i++) {
+			selectNote.options.add(new Option(a[i], a[i]));
+		};
+		
+	};
+
+</script>
+
+<body>
+	<SELECT id="rutine"></SELECT>
+	<div id="test" >Let's have a try!<div>
+</body>
