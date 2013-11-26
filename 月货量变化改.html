@@ -2,9 +2,9 @@
 <html>
 	<head>
 		<meta charset="GBK" />
-		<title>月货量变化</title>
-		<meta name="Description" content="百世快运事业部" />
-		<meta name="Keywords" content="百世快运事业部,月货量变化,趋势" />
+		<title>脭脗禄玫脕驴卤盲禄炉</title>
+		<meta name="Description" content="掳脵脢脌驴矛脭脣脢脗脪碌虏驴" />
+		<meta name="Keywords" content="掳脵脢脌驴矛脭脣脢脗脪碌虏驴,脭脗禄玫脕驴卤盲禄炉,脟梅脢脝" />
 		<script type="text/javascript" src="../../ichart.1.1.min.js"></script>
 		<link rel="stylesheet" href="../css/demo.css" type="text/css"/>
 		<script type="text/javascript">
@@ -16,7 +16,7 @@
 			
 			var data = [
 			         	{
-			         		name : '货量',
+			         		name : '禄玫脕驴',
 			         		value:flow,
 			         		color:'#ec4646',
 			         		line_width:3
@@ -30,19 +30,19 @@
 				data: data,
 				align:'center',
 				title : {
-					text:'2013年9月货量变化曲线图',
-					font : '微软雅黑',
+					text:'2013脛锚9脭脗禄玫脕驴卤盲禄炉脟煤脧脽脥录',
+					font : '脦垄脠铆脩脜潞脷',
 					fontsize:24,
 					color:'#b4b4b4'
 				},
 				subtitle : {
-					text:'暂空',
-					font : '微软雅黑',
+					text:'脭脻驴脮',
+					font : '脦垄脠铆脩脜潞脷',
 					color:'#b4b4b4'
 				},
 				footnote : {
-					text:'百世快运事业部2013-9',
-					font : '微软雅黑',
+					text:'掳脵脢脌驴矛脭脣脢脗脪碌虏驴2013-9',
+					font : '脦垄脠铆脩脜潞脷',
 					fontsize:11,
 					fontweight:600,
 					padding:'0 28',
@@ -56,15 +56,15 @@
 				shadow_offsetx : 0,
 				shadow_offsety : 0,
 				background_color:'#2e2e2e',
-				animation : true,//开启过渡动画
-				animation_duration:600,//600ms完成动画
+				animation : true,//驴陋脝么鹿媒露脡露炉禄颅
+				animation_duration:600,//600ms脥锚鲁脡露炉禄颅
 				tip:{
 					enable:true,
 					shadow:true,
 					listeners:{
-						 //tip:提示框对象、name:数据名称、value:数据值、text:当前文本、i:数据点的索引
+						 //tip:脤谩脢戮驴貌露脭脧贸隆垄name:脢媒戮脻脙没鲁脝隆垄value:脢媒戮脻脰碌隆垄text:碌卤脟掳脦脛卤戮隆垄i:脢媒戮脻碌茫碌脛脣梅脪媒
 						parseText:function(tip,name,value,text,i){
-							 return "<span style='color:#005268;font-size:12px;'>"+labels[i]+"号货量为:<br/>"+
+							 return "<span style='color:#005268;font-size:12px;'>"+labels[i]+"潞脜禄玫脕驴脦陋:<br/>"+
 								"</span><span style='color:#005268;font-size:20px;'>"+value+"kg</span>";
 						}
 					}
@@ -96,47 +96,39 @@
 						 scale_space:10,
 						 scale_size:2,
 						 scale_enable : false,
-						 label : {color:'#9d987a',font : '微软雅黑',fontsize:11,fontweight:600},
+						 label : {color:'#9d987a',font : '脦垄脠铆脩脜潞脷',fontsize:11,fontweight:600},
 						 scale_color:'#9f9f9f'
 					},{
 						 position:'bottom',	
-						 label : {color:'#9d987a',font : '微软雅黑',fontsize:11,fontweight:600},
+						 label : {color:'#9d987a',font : '脦垄脠铆脩脜潞脷',fontsize:11,fontweight:600},
 						 scale_enable : false,
 						 labels:labels
 					}]
 				}
 			});
-			//利用自定义组件构造左侧说明文本
+			//脌没脫脙脳脭露篓脪氓脳茅录镁鹿鹿脭矛脳贸虏脿脣碌脙梅脦脛卤戮
 			chart.plugin(new iChart.Custom({
 					drawFn:function(){
-						//计算位置
+						//录脝脣茫脦禄脰脙
 						var coo = chart.getCoordinate(),
 							x = coo.get('originx'),
 							y = coo.get('originy'),
 							w = coo.get('width'),
 							h = coo.get('height');
-						//在左上侧的位置，渲染一个单位的文字
+						//脭脷脳贸脡脧虏脿碌脛脦禄脰脙拢卢盲脰脠戮脪禄赂枚碌楼脦禄碌脛脦脛脳脰
 						chart.target.textAlign('start')
 						.textBaseline('bottom')
-						.textFont('600 11px 微软雅黑')
-						.fillText('货量(kg)',x-40,y-12,false,'#9d987a')
+						.textFont('600 11px 脦垄脠铆脩脜潞脷')
+						.fillText('禄玫脕驴(kg)',x-40,y-12,false,'#9d987a')
 						.textBaseline('top')
-						.fillText('(日期)',x+w+12,y+h+10,false,'#9d987a');
+						.fillText('(脠脮脝脷)',x+w+12,y+h+10,false,'#9d987a');
 						
 					}
 			}));
-		//开始画图
+		//驴陋脢录禄颅脥录
 		chart.draw();
 		});
-	addselect=function(element){
-		var addnode=document.
-		var a=[杭州,上海,无锡,嘉兴,湖州,宁波,台州,温州,金华];
-		var listd='<select id="startSite"> ';
-		for (b=0,b<a.length,b++){
-			listd=listd + ' <option value=' + a[i] + '>' + a[i] + '</option>'
-		}
-		listd=listd + '</select>'
-	}
+	
 
 </script>
 
@@ -144,7 +136,9 @@
 
 <style>
 	#canvasDiv{
-	margin:10%;
+	position: absolute;
+	left:100px;
+	top:30px;
 }
         #sd{
 	margin:10px 0px 15px 5px;}
@@ -153,38 +147,38 @@
 </style>
 </head>
 <body>
-	<input type="date" id="startDate" > 起始日期
+	<input type="date" id="startDate" > 脝冒脢录脠脮脝脷
 	<br>
-	<input type="date" id="endDate"> 截止日期
+	<input type="date" id="endDate"> 陆脴脰鹿脠脮脝脷
         <br>
 
         <select id="startSite">
-          <option value="杭州">杭州</option>
-          <option value="上海">上海</option>
-          <option value="无锡">无锡</option>
-          <option value="嘉兴">嘉兴</option>
+          <option value="潞录脰脻">潞录脰脻</option>
+          <option value="脡脧潞拢">脡脧潞拢</option>
+          <option value="脦脼脦媒">脦脼脦媒</option>
+          <option value="录脦脨脣">录脦脨脣</option>
         </select>
 
 
 	<select id="endSite">
-          <option value="杭州">杭州</option>
-          <option value="上海">上海</option>
-          <option value="无锡">无锡</option>
-          <option value="嘉兴">嘉兴</option>
+          <option value="潞录脰脻">潞录脰脻</option>
+          <option value="脡脧潞拢">脡脧潞拢</option>
+          <option value="脦脼脦媒">脦脼脦媒</option>
+          <option value="录脦脨脣">录脦脨脣</option>
         </select>
        
 <HR>	
 	<div id='canvasDiv'></div>
 	<div class='ichartjs_info'>
-		<span class='ichartjs_author'>writen by <a title="表格制作人" href="mailto:800best.com">xiaozhen216</a></span>
+		<span class='ichartjs_author'>writen by <a title="卤铆赂帽脰脝脳梅脠脣" href="mailto:800best.com">xiaozhen216</a></span>
 	
-		<div class='ichartjs_sm'>说明</div>
+		<div class='ichartjs_sm'>脣碌脙梅</div>
 		<div class='ichartjs_details'>
-			月度货量变化
+			脭脗露脠禄玫脕驴卤盲禄炉
 		</div>
-		<span class='ichartjs_sm'>备注：</span>
+		<span class='ichartjs_sm'>卤赂脳垄拢潞</span>
 		<span class='ichartjs_details'>
-			有问题请咨询数据中心
+			脫脨脦脢脤芒脟毛脳脡脩炉脢媒戮脻脰脨脨脛
 		</span>
 	</div>
 </body>
