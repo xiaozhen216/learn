@@ -5,56 +5,95 @@
 </script>
 
 <style>
+
 #baseDiv{
-	position:relative;
-	left:20px;
-	top:20px;	
+	position: absolute;
+	left:30px;
+	top:30px;	
 	width: 1200px;
 	box-shadow: 2px 2px 25px #888888;
 	/*width: calc(100%*0.5);*/
 	height: 600px;
 	background-color: #C5C1AA;  /*背景浅灰*/
 	padding: 20px;
+	z-index:-60;
 }
 
-#first{
-	width: 300px;
-	height: 500px;
-	margin: 50px;
-	background-color:rgb(218, 45, 101);
-	border: 10px solid rgba(255, 255, 255, 1);
+div div{
 	position:absolute;
-
-}
-
-#second{
+	margin: 50px;
 	width: 300px;
 	height: 500px;
-	left: 400px;
-	margin: 50px;
 	border: 10px solid rgba(255, 255, 255, 1);
-	background-color: white;
-	position: absolute;
+	-webkit-transform-origin: center 450px;
+	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
+	border-radius: 5px;
+}
+
+.f{
+	background-color:rgb(218, 45, 101);	
+}
+
+.s{
+	left: 400px;	
+	background-color: white;	
 	background-image:url(bb.jpg);
 	background-repeat: no-repeat;
-
-
 }
 
-#third{
-	width: 300px;
-	height: 500px;
+.t{
 	left: 780px;
-	margin: 50px;
-	border: 10px solid rgba(255, 255, 255,1);
-	background-color: yellow;
-	position: absolute;
 	background: -moz-linear-gradient(top,  #f0f0f0 0%, #828387 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#f0f0f0), color-stop(100%,#828387));
   	background: -webkit-linear-gradient(top,  #f0f0f0 0%,#828387 100%);
   	background: -o-linear-gradient(top,  #f0f0f0 0%,#828387 100%);
   	background: -ms-linear-gradient(top,  #f0f0f0 0%,#828387 100%);
   	background: linear-gradient(to bottom,  #f0f0f0 0%,#828387 100%);
+}
+
+#first{
+	background-color:rgb(218, 45, 101);
+}
+
+#f1{
+	-webkit-transform: rotate(5deg);
+	z-index:-1;
+}
+
+#f2{
+	-webkit-transform: rotate(10deg);
+	z-index:-2;
+}
+
+#f3{
+	-webkit-transform: rotate(15deg);
+	z-index:-3;
+}
+
+#second{
+	/* 范围扩大 -webkit-transform:scale(2,1.5);*/
+	border-radius: 100%;
+	z-index:-5;
+	/* 没能实现动画   仍需寻找其他方法 -webkit-transform-origin: 84px 84px;
+	-webkit-animation: spin 20s linear infinite;*/
+}
+
+#s1{
+	background-color:rgb(218, 45, 101);
+	-webkit-transform:translate(10px,10px);
+	z-index:-6;
+}
+
+#s2{
+	background-color:rgb(218, 45, 101);
+	-webkit-transform:translate(20px,20px);
+	z-index:-7;
+}
+
+
+
+
+#third{
 	-webkit-transform: rotate(10deg);
 }
 
@@ -62,21 +101,24 @@
 
 <body>
 	<div id="baseDiv">
-		<div id="first"></div>
-		<div id="f1"></div>
-		<div id="f2"></div>
-		<div id="f3"></div>
-		<div id="f4"></div>
-		<div id="second"></div>
-		<div id="s1"></div>
-		<div id="s2"></div>
-		<div id="s3"></div>
-		<div id="s4"></div>
-		<div id="third"></div>
-		<div id="t1"></div>
-		<div id="t2"></div>
-		<div id="t3"></div>
-		<div id="t4"></div>
+		<div id="first" class="f"></div>
+		<div id="f1" class="f"></div>
+		<div id="f2" class="f"></div>
+		<div id="f3" class="f"></div>
+		
+		<div id="second" class="s">
+			<a href="工作.html">
+		</div>
+		<div id="s1" class="s"></div>
+		<div id="s2" class="s"></div>
+		<div id="s3" class="s"></div>
+		<div id="s4" class="s"></div>
+
+		<div id="third" class="t"></div>
+		<div id="t1" class="t"></div>
+		<div id="t2" class="t"></div>
+		<div id="t3" class="t"></div>
+		<div id="t4" class="t"></div>
 	</div>
 </body>
 </html>
