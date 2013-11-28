@@ -1,0 +1,79 @@
+<!doctype html>
+
+<head>
+	<style type="text/css">
+		body{
+			background: #C5C1AA; 
+		}
+
+		ul {
+			list-style-type: none;/*这个就是把li前面的黑点去掉*/
+			padding: 100px;
+			margin: 100px;
+			text-align: center;
+		}
+
+		ul li {
+			position: relative;
+			display: inline-block;
+			margin-right: 100px;
+
+		}
+
+		ul li a {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			-webkit-transition: all 500ms ease-in-out 0;
+			-moz-transition: all 500ms ease-in-out 0;
+			-o-transition: all 500ms ease-in-out 0;
+			transition: all 500ms ease-in-out 0;
+			font: bold 1.3rem/1 ;
+			
+			text-decoration: none;
+			text-align: center;/*文字对齐方式为居中*/
+			/*font-family: sans-serif;
+			font-size:20px; 这个无法设置其中的字体，是不是哪里出了问题？*/
+			line-height: 200%;
+			border: 10px solid #6AB1AF;/*边框厚度设置*/
+			border-radius: 100%; /*边框是圆形的*/
+			display: block;
+			width: 7em; /*em是相对于元素的父元素的font-size进行计算；rem是相对于根元素html的font-size进行计算*/
+			height: 7em;
+			padding: 1rem;
+			background: #F7EAB9;
+		}
+
+		ul li a:hover {/*hover中文意思是“悬浮，悬停”，就是当鼠标放到上面的时候,注：在 CSS 定义中，a:hover 必须位于 a:link 和 a:visited 才能生效！注：在 CSS 定义中，a:active 必须位于 a:hover 之后，这样才能生效！*/			
+			background: #6AB1AF;
+			background-image:url(bbsmile2.jpg);
+			background-position: center;
+			background-repeat: no-repeat;
+
+		}
+
+		ul li:after {
+			position: absolute;
+			top: 2rem;
+			right: 1rem;
+			content: "";
+			border-bottom: 10px solid #6AB1AF;
+			width: 30rem;
+			z-index:-60;
+		}
+
+
+	</style>
+</head>
+<html>
+	<body>
+		<ul>
+			<li><a href="#" title="one">two&#xe622;</a></li> <!-- href="#" 是空连接的意思 -->
+			<li><a href="#" title="two">&#xe622;</a></li>
+			<li><a href="#" title="three">&#xe622;</a></li>
+			<li><a href="#" title="three">&#xe622;</a></li>
+
+
+		</ul>
+	</body>
+</html>
