@@ -1,19 +1,28 @@
 <!DOCTYPE html>
 <html>
 <script>
-	var zhankai=function(){
-		var jf1=document.getElementById("f1");
-		var jf2=document.getElementById("f2");
-		var jf3=document.getElementById("f3");
+
+	/*var deg=function(obj,strdeg){
+		var s="rotate(" & strdeg & "deg)"
+		obj.style.webkitTransform="s";
+	}*/
+
+	var zhankai=function(objone,objtwo,objthree){
+		var jf1=document.getElementById(objone);
+		var jf2=document.getElementById(objtwo);
+		var jf3=document.getElementById(objthree);
+		/*deg(jf1,5);
+		deg(jf2,10);
+		deg(jf3,15);*/
 		jf1.style.webkitTransform="rotate(5deg)";
 		jf2.style.webkitTransform="rotate(10deg)";
 		jf3.style.webkitTransform="rotate(15deg)";
 	}
 
-	var suohui=function(){
-		var jf1=document.getElementById("f1");
-		var jf2=document.getElementById("f2");
-		var jf3=document.getElementById("f3");
+	var suohui=function(objone,objtwo,objthree){
+		var jf1=document.getElementById(objone);
+		var jf2=document.getElementById(objtwo);
+		var jf3=document.getElementById(objthree);
 		jf1.style.webkitTransform="rotate(0deg)";
 		jf2.style.webkitTransform="rotate(0deg)";
 		jf3.style.webkitTransform="rotate(0deg)";
@@ -44,19 +53,21 @@ div div{
 	border: 10px solid rgba(255, 255, 255, 1);	
 	box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.2);
 	border-radius: 5px;
+	background-repeat: no-repeat;
 	-webkit-transform-origin: center 450px;
+	-webkit-transition: all 400ms ease-in-out 0;
 }
 
 .f{
-	background-color:rgb(218, 45, 101);	
-
+	background-color:white;	
+	background-image: url(me.jpg);
 }
 
 .s{
 	left: 400px;	
 	background-color: white;	
-	background-image:url(bb.jpg);
-	background-repeat: no-repeat;
+	
+	
 }
 
 .t{
@@ -70,75 +81,94 @@ div div{
 }
 
 #first{
-	background-color:rgb(218, 45, 101);
+	
 }
 
 #f1{
-	/*-webkit-transform: rotate(5deg);*/
+	/*-webkit-transform: rotate(5deg);*/	
 	z-index:-1;
 }
 
 #f2{
-	/*-webkit-transform: rotate(10deg);*/
+	/*-webkit-transform: rotate(10deg);*/	
 	z-index:-2;
 }
 
 #f3{
-	/*-webkit-transform: rotate(15deg);*/
+	/*-webkit-transform: rotate(15deg);*/	
 	z-index:-3;
 }
 
 #second{
-	/* 范围扩大 -webkit-transform:scale(2,1.5);*/
-	border-radius: 100%;
-	z-index:-5;
+	/* 范围扩大 -webkit-transform:scale(2,1.5);
+	border-radius: 100%;*/
+	z-index:0;
+	
+	background-image:url(bb2.jpg);
 	/* 没能实现动画   仍需寻找其他方法 -webkit-transform-origin: 84px 84px;
 	-webkit-animation: spin 20s linear infinite;*/
 }
 
 #s1{
-	background-color:rgb(218, 45, 101);
-	-webkit-transform:translate(10px,10px);
-	z-index:-6;
+	/*-webkit-transform:translate(10px,10px);*/
+	z-index:-1;
+	background-image:url(bb.jpg);	
 }
 
 #s2{
-	background-color:rgb(218, 45, 101);
-	-webkit-transform:translate(20px,20px);
-	z-index:-7;
+	/*-webkit-transform:translate(20px,20px);*/
+	z-index:-2;
+}
+
+#s3{
+	/*-webkit-transform:translate(20px,20px);*/
+	z-index:-3;
 }
 
 
-
-
 #third{
-	-webkit-transform: rotate(10deg);
+	z-index:5;
+}
+
+#t1{
+	/*-webkit-transform:translate(10px,10px);*/
+	z-index:4;
+}
+
+#t2{
+	/*-webkit-transform:translate(20px,20px);*/
+	z-index:3;
+}
+
+#t3{
+	/*-webkit-transform:translate(20px,20px);*/
+	z-index:2;
 }
 
 </style>
 
 <body>
 	<div id="baseDiv">
-		<div id="first" class="f" onmouseover="zhankai()" onmouseout="suohui()">
+		<div id="first" class="f" onmouseover="zhankai('f1','f2','f3')" onmouseout="suohui('f1','f2','f3')">
 			<a href="工作.html">
 		</div>
 		<div id="f1" class="f" ></div>
 		<div id="f2" class="f" ></div>
 		<div id="f3" class="f" ></div>
 		
-		<div id="second" class="s">
+		<div id="second" class="s" onmouseover="zhankai('s1','s2','s3')" onmouseout="suohui('s1','s2','s3')">
 			<a href="为人母.html">
 		</div>
 		<div id="s1" class="s"></div>
 		<div id="s2" class="s"></div>
 		<div id="s3" class="s"></div>
-		<div id="s4" class="s"></div>
+		
 
-		<div id="third" class="t"></div>
+		<div id="third" class="t" onmouseover="zhankai('t1','t2','t3')" onmouseout="suohui('t1','t2','t3')"></div>
 		<div id="t1" class="t"></div>
 		<div id="t2" class="t"></div>
 		<div id="t3" class="t"></div>
-		<div id="t4" class="t"></div>
+		
 	</div>
 </body>
 </html>
